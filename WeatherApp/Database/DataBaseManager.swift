@@ -17,7 +17,12 @@ final class DataBaseManager {
     }
     
     // Saving weather info into Realm database
-    func save(weatherToday: TodaysWeatherForecastResponse, weeklyWeather:WeeklyWeatherForecastResponse) {
+    func save(weatherToday: TodaysWeatherForecastResponse?, weeklyWeather:WeeklyWeatherForecastResponse?) {
+        
+        guard let weatherToday = weatherToday, let weeklyWeather =  weeklyWeather else{
+            return
+        }
+        
         // As we are saving only one weather data ata time
         // so thats why deleting unnecessary object
         if let savedWeather = weatherInDatabase(){

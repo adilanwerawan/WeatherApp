@@ -23,7 +23,7 @@ struct ApiConfig{
     static var apiKey = "7c075dce98d448e46be888bda42c0418"
     
     enum EndPoints:String{
-        case weather = "weather"
+        case weather = "weather" // today
         case forecast = "forecast" // weekly
     }
 }

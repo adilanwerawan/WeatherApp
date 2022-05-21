@@ -9,10 +9,10 @@ import Foundation
 
 class Settings{
     enum Unit:String{
-        case matric = "matric" // Celsius and wind speed in meter/sec
+        case metric = "metric" // Celsius and wind speed in meter/sec
         case imperial = "imperial" // Fahrenheit and wind speed in miles/hour
     }
     
     // By default Celsius
-    static var unit:Unit = .matric
+    static var unit:Unit = .metric
 }

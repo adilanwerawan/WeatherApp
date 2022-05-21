@@ -8,7 +8,6 @@
 import Foundation
 import Combine
 
-
 enum Duration{
     case weekly
     case todays
@@ -17,10 +16,10 @@ enum Duration{
 protocol  WeatherApiServiceProtocol{
     /// Getting weekly weather.
     ///  Taking latitude and longitude as parameters so we can fetch weather of different cities
-    func weeklyWeather(lat:Double, long:Double) -> AnyPublisher<WeeklyWeatherForecastResponse, Error>
+    func weeklyWeather() -> AnyPublisher<WeeklyWeatherForecastResponse, Error>
     /// Getting daily weather.
     ///  Taking latitude and longitude as parameters so we can fetch weather of different cities
-    func todaysWeather(lat:Double, long:Double) -> AnyPublisher<TodaysWeatherForecastResponse, Error>
+    func todaysWeather() -> AnyPublisher<TodaysWeatherForecastResponse, Error>
 }
 
 // MARK: WeatherApiService has been implemented
@@ -28,13 +27,13 @@ protocol  WeatherApiServiceProtocol{
 // and fethcing the required data and parsing it
 
 final class WeatherApiService:WeatherApiServiceProtocol{
+    /*
+     lat=25.220144&lon=55.304328 latitude and longitude of dubai by default
+     */
+    var providedLat:Double = 25.220144 // latitude
+    var providedLong:Double = 55.304328 // longitude
     
-    var providedLat:Double = 0.0 // latitude
-    var providedLong:Double = 0.0 // longitude
-    
-    func weeklyWeather(lat: Double, long: Double) -> AnyPublisher<WeeklyWeatherForecastResponse, Error> {
-        self.providedLat = lat
-        self.providedLong = long
+    func weeklyWeather() -> AnyPublisher<WeeklyWeatherForecastResponse, Error> {
         
         var sessionDataTask:URLSessionDataTask?
         
@@ -67,9 +66,7 @@ final class WeatherApiService:WeatherApiServiceProtocol{
         .eraseToAnyPublisher()
     }
     
-    func todaysWeather(lat: Double, long: Double) -> AnyPublisher<TodaysWeatherForecastResponse, Error> {
-        self.providedLat = lat
-        self.providedLong = long
+    func todaysWeather() -> AnyPublisher<TodaysWeatherForecastResponse, Error> {
         
         var sessionDataTask:URLSessionDataTask?
         
