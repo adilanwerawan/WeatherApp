@@ -19,4 +19,14 @@ struct ApiConfig{
         }
         return nil
     }
+    
+    static var apiKey = "7c075dce98d448e46be888bda42c0418"
+    
+    enum EndPoints:String{
+        case weather = "weather"
+        case forecast = "forecast" // weekly
+    }
 }
+
+/* https://api.openweathermap.org/data/2.5/forecast?lat=51.5085&lon=-0.1257&cnt=7&appid=7c075dce98d448e46be888bda42c0418
+ */

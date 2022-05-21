@@ -12,6 +12,11 @@
 		FA5D299D2838B08A00EA4CC4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA5D299C2838B08A00EA4CC4 /* Assets.xcassets */; };
 		FA5D29A02838B08A00EA4CC4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA5D299F2838B08A00EA4CC4 /* Preview Assets.xcassets */; };
 		FA5D29CE2838B8AB00EA4CC4 /* ApiConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5D29CD2838B8AB00EA4CC4 /* ApiConfig.swift */; };
+		FA5D29D02838BD3200EA4CC4 /* TodaysWeatherForecastResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5D29CF2838BD3200EA4CC4 /* TodaysWeatherForecastResponse.swift */; };
+		FA5D29D22838C80000EA4CC4 /* WeaklyWeatherForecastResponce.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5D29D12838C7FF00EA4CC4 /* WeaklyWeatherForecastResponce.swift */; };
+		FA5D29D42838CD5900EA4CC4 /* WeatherApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5D29D32838CD5900EA4CC4 /* WeatherApiService.swift */; };
+		FA5D29D82838D58400EA4CC4 /* ApiServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5D29D72838D58400EA4CC4 /* ApiServiceError.swift */; };
+		FA5D29DB2838D84B00EA4CC4 /* WeatherAPiService+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5D29DA2838D84B00EA4CC4 /* WeatherAPiService+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +46,11 @@
 		FA5D29AF2838B08B00EA4CC4 /* weatherappUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = weatherappUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA5D29C62838B2BC00EA4CC4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		FA5D29CD2838B8AB00EA4CC4 /* ApiConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiConfig.swift; sourceTree = "<group>"; };
+		FA5D29CF2838BD3200EA4CC4 /* TodaysWeatherForecastResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodaysWeatherForecastResponse.swift; sourceTree = "<group>"; };
+		FA5D29D12838C7FF00EA4CC4 /* WeaklyWeatherForecastResponce.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeaklyWeatherForecastResponce.swift; sourceTree = "<group>"; };
+		FA5D29D32838CD5900EA4CC4 /* WeatherApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherApiService.swift; sourceTree = "<group>"; };
+		FA5D29D72838D58400EA4CC4 /* ApiServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiServiceError.swift; sourceTree = "<group>"; };
+		FA5D29DA2838D84B00EA4CC4 /* WeatherAPiService+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WeatherAPiService+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +144,7 @@
 		FA5D29C92838B85300EA4CC4 /* Api */ = {
 			isa = PBXGroup;
 			children = (
+				FA5D29D62838D56D00EA4CC4 /* ErrorTypes */,
 				FA5D29CC2838B88C00EA4CC4 /* Services */,
 				FA5D29CB2838B88600EA4CC4 /* Models */,
 				FA5D29CA2838B87B00EA4CC4 /* ApiConfig */,
@@ -152,6 +163,7 @@
 		FA5D29CB2838B88600EA4CC4 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				FA5D29D52838CF2400EA4CC4 /* Responces */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -159,8 +171,35 @@
 		FA5D29CC2838B88C00EA4CC4 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				FA5D29D92838D82800EA4CC4 /* WeatherApiService+Extension */,
+				FA5D29D32838CD5900EA4CC4 /* WeatherApiService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		FA5D29D52838CF2400EA4CC4 /* Responces */ = {
+			isa = PBXGroup;
+			children = (
+				FA5D29CF2838BD3200EA4CC4 /* TodaysWeatherForecastResponse.swift */,
+				FA5D29D12838C7FF00EA4CC4 /* WeaklyWeatherForecastResponce.swift */,
+			);
+			path = Responces;
+			sourceTree = "<group>";
+		};
+		FA5D29D62838D56D00EA4CC4 /* ErrorTypes */ = {
+			isa = PBXGroup;
+			children = (
+				FA5D29D72838D58400EA4CC4 /* ApiServiceError.swift */,
+			);
+			path = ErrorTypes;
+			sourceTree = "<group>";
+		};
+		FA5D29D92838D82800EA4CC4 /* WeatherApiService+Extension */ = {
+			isa = PBXGroup;
+			children = (
+				FA5D29DA2838D84B00EA4CC4 /* WeatherAPiService+Extension.swift */,
+			);
+			path = "WeatherApiService+Extension";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -294,7 +333,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA5D299B2838B08600EA4CC4 /* ContentView.swift in Sources */,
+				FA5D29D42838CD5900EA4CC4 /* WeatherApiService.swift in Sources */,
+				FA5D29D82838D58400EA4CC4 /* ApiServiceError.swift in Sources */,
+				FA5D29D22838C80000EA4CC4 /* WeaklyWeatherForecastResponce.swift in Sources */,
 				FA5D29992838B08600EA4CC4 /* WeatherAppApp.swift in Sources */,
+				FA5D29DB2838D84B00EA4CC4 /* WeatherAPiService+Extension.swift in Sources */,
+				FA5D29D02838BD3200EA4CC4 /* TodaysWeatherForecastResponse.swift in Sources */,
 				FA5D29CE2838B8AB00EA4CC4 /* ApiConfig.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -471,7 +515,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.samples.weatherapp.dev;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SERVER_URL = "https://api.openweathermap.org/data/2.5/weather?";
+				SERVER_URL = "https://api.openweathermap.org/data/2.5/";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -503,7 +547,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.samples.weatherapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SERVER_URL = "https://api.openweathermap.org/data/2.5/weather?";
+				SERVER_URL = "https://api.openweathermap.org/data/2.5/";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -688,7 +732,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.samples.weatherapp.staging;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SERVER_URL = "https://api.openweathermap.org/data/2.5/weather?";
+				SERVER_URL = "https://api.openweathermap.org/data/2.5/";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
