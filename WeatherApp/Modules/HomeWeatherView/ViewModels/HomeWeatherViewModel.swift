@@ -16,6 +16,7 @@ enum HomeWeatherViewModelState:Equatable{
 }
 
 final class HomeWeatherViewModel : ObservableObject{
+    
     internal let weatherApiService: WeatherApiServiceProtocol
     internal var bindings = Set<AnyCancellable>()
     @Published var state:HomeWeatherViewModelState = .finishLoading

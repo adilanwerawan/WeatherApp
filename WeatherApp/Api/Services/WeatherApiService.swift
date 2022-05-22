@@ -27,13 +27,17 @@ protocol  WeatherApiServiceProtocol{
 // and fethcing the required data and parsing it
 
 final class WeatherApiService:WeatherApiServiceProtocol{
+    
     /*
-     lat=25.220144&lon=55.304328 latitude and longitude of dubai by default
+     lat=25.220144&lon=55.304328 latitude and longitude of dubai
      */
-    var providedLat:Double = 25.220144 // latitude
-    var providedLong:Double = 55.304328 // longitude
+    var providedLat:Double = UserDefaults.standard.double(forKey: UserDefaultKeys.latitude) // latitude
+    var providedLong:Double = UserDefaults.standard.double(forKey: UserDefaultKeys.longitude)  // longitude
     
     func weeklyWeather() -> AnyPublisher<WeeklyWeatherForecastResponse, Error> {
+        
+        providedLat = UserDefaults.standard.double(forKey: UserDefaultKeys.latitude) // latitude
+        providedLong = UserDefaults.standard.double(forKey: UserDefaultKeys.longitude)
         
         var sessionDataTask:URLSessionDataTask?
         
@@ -67,6 +71,9 @@ final class WeatherApiService:WeatherApiServiceProtocol{
     }
     
     func todaysWeather() -> AnyPublisher<TodaysWeatherForecastResponse, Error> {
+        
+        providedLat = UserDefaults.standard.double(forKey: UserDefaultKeys.latitude) // latitude
+        providedLong = UserDefaults.standard.double(forKey: UserDefaultKeys.longitude)
         
         var sessionDataTask:URLSessionDataTask?
         

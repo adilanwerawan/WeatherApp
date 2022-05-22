@@ -31,6 +31,10 @@
 		FAAEAB0328396A4400AC0455 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAEAB0228396A4400AC0455 /* Date+Extension.swift */; };
 		FAF98CF7283A06B00023322E /* DailyWeatherRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF98CF6283A06B00023322E /* DailyWeatherRow.swift */; };
 		FAF98CF9283A2B540023322E /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF98CF8283A2B540023322E /* Array+Extension.swift */; };
+		FAF98CFB283A2E510023322E /* MainContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF98CFA283A2E510023322E /* MainContentView.swift */; };
+		FAF98CFD283A2E920023322E /* LocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF98CFC283A2E920023322E /* LocationViewModel.swift */; };
+		FAF98D00283A31E90023322E /* LocationWorkViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF98CFF283A31E90023322E /* LocationWorkViews.swift */; };
+		FAF98D02283A33270023322E /* General.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF98D01283A33270023322E /* General.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +81,10 @@
 		FAAEAB0228396A4400AC0455 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		FAF98CF6283A06B00023322E /* DailyWeatherRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyWeatherRow.swift; sourceTree = "<group>"; };
 		FAF98CF8283A2B540023322E /* Array+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
+		FAF98CFA283A2E510023322E /* MainContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainContentView.swift; sourceTree = "<group>"; };
+		FAF98CFC283A2E920023322E /* LocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewModel.swift; sourceTree = "<group>"; };
+		FAF98CFF283A31E90023322E /* LocationWorkViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LocationWorkViews.swift; path = ../../../../../../../Documents/LocationWorkViews.swift; sourceTree = "<group>"; };
+		FAF98D01283A33270023322E /* General.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = General.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,7 +167,9 @@
 		FA5D29C72838B63F00EA4CC4 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				FAF98CFE283A31D80023322E /* Components */,
 				FA5D29982838B08600EA4CC4 /* WeatherAppApp.swift */,
+				FAF98CFA283A2E510023322E /* MainContentView.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -275,6 +285,8 @@
 			isa = PBXGroup;
 			children = (
 				FAAEAAED283919F300AC0455 /* Settings.swift */,
+				FAF98CFC283A2E920023322E /* LocationViewModel.swift */,
+				FAF98D01283A33270023322E /* General.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -310,6 +322,14 @@
 				FAAEAAF92839651000AC0455 /* TodayWeatherView.swift */,
 				FAAEAAFC2839652300AC0455 /* WeeklyWeatherView.swift */,
 				FAF98CF6283A06B00023322E /* DailyWeatherRow.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		FAF98CFE283A31D80023322E /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				FAF98CFF283A31E90023322E /* LocationWorkViews.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -455,7 +475,10 @@
 				FA5D299B2838B08600EA4CC4 /* HomeWeatherView.swift in Sources */,
 				FAAEAB002839670600AC0455 /* WeeklyWeatherRowViewModel.swift in Sources */,
 				FAAEAAF528395ED600AC0455 /* HomeWeatherViewModel+Extension.swift in Sources */,
+				FAF98D00283A31E90023322E /* LocationWorkViews.swift in Sources */,
 				FAAEAAE92839040800AC0455 /* TodaysWeatherDBModel.swift in Sources */,
+				FAF98D02283A33270023322E /* General.swift in Sources */,
+				FAF98CFD283A2E920023322E /* LocationViewModel.swift in Sources */,
 				FAAEAAF8283962F000AC0455 /* TodaysWeatherViewModel.swift in Sources */,
 				FA5D29D42838CD5900EA4CC4 /* WeatherApiService.swift in Sources */,
 				FA5D29D82838D58400EA4CC4 /* ApiServiceError.swift in Sources */,
@@ -471,6 +494,7 @@
 				FAAEAAFD2839652300AC0455 /* WeeklyWeatherView.swift in Sources */,
 				FAAEAAEB28390DAE00AC0455 /* DataBaseManager.swift in Sources */,
 				FAAEAB0328396A4400AC0455 /* Date+Extension.swift in Sources */,
+				FAF98CFB283A2E510023322E /* MainContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -555,7 +579,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -610,7 +634,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -634,6 +658,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = weatherapp/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "WeatherApp Dev";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We need your permission of your location for getting weather information.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -667,6 +692,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = weatherapp/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "WeatherApp Dev";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We need your permission of your location for getting weather information.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -830,7 +856,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -853,6 +879,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = weatherapp/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "WeatherApp Dev";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We need your permission of your location for getting weather information.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
