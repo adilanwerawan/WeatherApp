@@ -16,7 +16,7 @@ class LocationViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
     
     private let locationManager: CLLocationManager
     
-    static var count = 0
+    static var notificationCount = 0
     
     override init() {
         locationManager = CLLocationManager()
@@ -45,10 +45,10 @@ class LocationViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
             LatLong.latitude = locations.first?.coordinate.latitude
             LatLong.longitude = locations.first?.coordinate.longitude
             
-            if LocationViewModel.count < 1{
+            if LocationViewModel.notificationCount < 1{
                 NotificationCenter.default.post(name: HomeViewNotifications.locationIsUpdated, object: nil, userInfo: nil)
             }
-            LocationViewModel.count += 1
+            LocationViewModel.notificationCount += 1
         }
     }
     

@@ -11,3 +11,10 @@ struct UserDefaultKeys{
   static let latitude = "latitude"
   static let longitude = "longitude"
 }
+
+struct GeneralKeys{
+    struct locationUserInfoDict{
+        static let latitude = "latitude"
+        static let longitude = "longitude"
+    }
+}

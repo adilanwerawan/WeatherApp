@@ -55,32 +55,36 @@ struct HomeWeatherView: View {
         }
         .onReceive(NotificationCenter.default.publisher(for: HomeViewNotifications.locationIsUpdated))
         { (output) in
-            DispatchQueue.main.async { 
-                if let lati = LatLong.latitude, let longi = LatLong.longitude, lati != 0, longi != 0{
-                    NotificationCenter.default.removeObserver(self)
-                    self.latitude = lati
-                    self.longitude = longi
-                    self.viewModel.fetchTodayWeatherDetails()
-                    viewModel.todayViewModel.$weather
-                        .receive(on: RunLoop.main)
-                        .sink(receiveValue: { todaysWeatherViewModel in
-                            // Checking if weather info has been received from api
-                            if let _ = todaysWeatherViewModel{
-                                isTodaysWeatherRecieved.toggle()
-                            }
-                        })
-                        .store(in: &bindings)
-                    viewModel.$weeklyRowViewModels
-                        .receive(on: RunLoop.main)
-                        .sink(receiveValue: { rowViewModels in
-                            // Checking if weather info has been received from api
-                            if let _ = rowViewModels{
-                                isWeeklyWeatherRecieved.toggle()
-                            }
-                        })
-                        .store(in: &bindings)
-                }
+            DispatchQueue.main.async {
+                fetchWeatherInfo()
             }
+        }
+    }
+    
+    func fetchWeatherInfo(){
+        if let lati = LatLong.latitude, let longi = LatLong.longitude, lati != 0, longi != 0{
+//                    NotificationCenter.default.removeObserver(self)
+            self.latitude = lati
+            self.longitude = longi
+            self.viewModel.fetchTodayWeatherDetails()
+            viewModel.todayViewModel.$weather
+                .receive(on: RunLoop.main)
+                .sink(receiveValue: { todaysWeatherViewModel in
+                    // Checking if weather info has been received from api
+                    if let _ = todaysWeatherViewModel{
+                        isTodaysWeatherRecieved.toggle()
+                    }
+                })
+                .store(in: &bindings)
+            viewModel.$weeklyRowViewModels
+                .receive(on: RunLoop.main)
+                .sink(receiveValue: { rowViewModels in
+                    // Checking if weather info has been received from api
+                    if let _ = rowViewModels{
+                        isWeeklyWeatherRecieved.toggle()
+                    }
+                })
+                .store(in: &bindings)
         }
     }
 }
