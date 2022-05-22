@@ -8,6 +8,7 @@
 import Foundation
 import RealmSwift
 
+// Purpose to save the weather info in local database
 final class DataBaseManager {
     
     private var localDatabase:Realm

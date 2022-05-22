@@ -14,10 +14,12 @@ enum HomeWeatherViewModelState:Equatable{
     case finishLoading
     case error(String)
 }
-
+// MARK: HomeWeatherViewModel is responsible for calling the api and fetching the data
+// We are using combine for communication between ViewModel and View
 final class HomeWeatherViewModel : ObservableObject{
     
     internal let weatherApiService: WeatherApiServiceProtocol
+    
     internal var bindings = Set<AnyCancellable>()
     @Published var state:HomeWeatherViewModelState = .finishLoading
     var todayViewModel:TodaysWeatherViewModel = TodaysWeatherViewModel()
@@ -43,7 +45,7 @@ final class HomeWeatherViewModel : ObservableObject{
         }
     }
     
-    init(weatherApi:WeatherApiService = WeatherApiService()){
+    init(weatherApi:WeatherApiServiceProtocol = WeatherApiService()){
         self.weatherApiService = weatherApi
     }
 }

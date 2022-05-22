@@ -7,11 +7,12 @@
 
 import Foundation
 
+// UserDefaultKeys to be used in system UserDefaults
 struct UserDefaultKeys{
   static let latitude = "latitude"
   static let longitude = "longitude"
 }
-
+// Keys for dictionaries
 struct GeneralKeys{
     struct locationUserInfoDict{
         static let latitude = "latitude"

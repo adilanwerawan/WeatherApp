@@ -7,7 +7,11 @@
 
 import Foundation
 
-struct TodaysWeatherForecastResponse : Codable {
+struct TodaysWeatherForecastResponse : Codable, Equatable {
+    static func == (lhs: TodaysWeatherForecastResponse, rhs: TodaysWeatherForecastResponse) -> Bool {
+        return lhs.id == rhs.id
+    }
+    
     
     let base : String
     let cod : Int

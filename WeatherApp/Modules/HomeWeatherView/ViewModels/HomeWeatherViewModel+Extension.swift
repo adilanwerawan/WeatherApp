@@ -9,6 +9,10 @@ import Foundation
 import Combine
 
 extension HomeWeatherViewModel{
+    /*
+     First view model will call todays weather info and then it will
+     fetch weekly weather info
+     */
     internal func fetchTodayWeatherDetails(){
         state = .loading
         

@@ -9,6 +9,7 @@ import Foundation
 import CoreLocation
 import SwiftUI
 
+/// LocationViewModel is using the core location for getting the user location
 class LocationViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
     @Published var authorizationStatus: CLAuthorizationStatus
     @Published var lastSeenLocation: CLLocation?
@@ -36,7 +37,7 @@ class LocationViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
     func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
         authorizationStatus = manager.authorizationStatus
     }
-    
+    // When device will get the location it will be received inside this function
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
         if lastSeenLocation != locations.first{
@@ -44,7 +45,8 @@ class LocationViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
             fetchCountryAndCity(for: locations.first)
             LatLong.latitude = locations.first?.coordinate.latitude
             LatLong.longitude = locations.first?.coordinate.longitude
-            
+            // It was continuing posting the notifications
+            // This is work wround we have to enhance it
             if LocationViewModel.notificationCount < 1{
                 NotificationCenter.default.post(name: HomeViewNotifications.locationIsUpdated, object: nil, userInfo: nil)
             }
@@ -61,6 +63,7 @@ class LocationViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
     }
 }
 
+// Saving user latitude and longitue insude this struct
 struct LatLong{
     static var latitude:Double? = nil
     static var longitude:Double? = nil

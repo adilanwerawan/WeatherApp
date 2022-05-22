@@ -8,9 +8,10 @@
 import Foundation
 import SwiftUI
 
+/// The which we are using in the weekly weather view
 struct DailyWeatherRow: View {
   private let viewModel: WeeklyWeatherRowViewModel
-  
+  // Intializer dependency injection for WeeklyWeatherRowViewModel
   init(viewModel: WeeklyWeatherRowViewModel) {
     self.viewModel = viewModel
   }
@@ -18,6 +19,7 @@ struct DailyWeatherRow: View {
   var body: some View {
       HStack {
           VStack {
+              // Date and month name showing vertically
               Text("\(viewModel.onlyDate)")
               Text("\(viewModel.monthNameShort)")
           }

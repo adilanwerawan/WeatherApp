@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+/// Purpose : TodayWeatherView is responsible for showing the current day weather info
+///  it is getting this info from its view model
 struct TodayWeatherView: View {
     @ObservedObject var viewModel:TodaysWeatherViewModel
     var body: some View {
@@ -18,6 +20,8 @@ struct TodayWeatherView: View {
             Text("\(viewModel.temperature)°")
                 .font(.system(size: 30, weight: .bold))
             HStack(spacing: 5.0){
+                // H means high temprature
+                // L means low temprature
                 Text("H:\(viewModel.maxTemperature)°")
                 Text("L:\(viewModel.minTemperature)°")
             }

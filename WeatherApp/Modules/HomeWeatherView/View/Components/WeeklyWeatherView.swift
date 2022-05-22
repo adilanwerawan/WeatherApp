@@ -7,9 +7,10 @@
 
 import SwiftUI
 
+/// Purpose : WeeklyWeatherView is responsible for showing the weekly weather info
+///  it is getting this info from its view model
 struct WeeklyWeatherView: View {
     @State var rowViewModels:[WeeklyWeatherRowViewModel]
-    
     var body: some View {
         VStack{
             Spacer()

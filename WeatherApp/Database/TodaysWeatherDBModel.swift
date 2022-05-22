@@ -9,7 +9,8 @@ import Foundation
 import RealmSwift
 
 
-// TodaysWeatherDBModel is the Database model for saving the todays weather data
+// TodaysWeatherDBModel is the Database model for saving the todays weather data along with
+// weekly weather data
 
 class TodaysWeatherDBModel: Object {
     
