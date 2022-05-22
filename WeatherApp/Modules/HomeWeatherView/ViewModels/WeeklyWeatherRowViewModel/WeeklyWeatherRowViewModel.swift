@@ -7,8 +7,10 @@
 
 import Foundation
 
-struct WeeklyWeatherRowViewModel {
+struct WeeklyWeatherRowViewModel:Identifiable {
     private let weather: WeeklyWeatherForecastResponse.Item
+    
+    internal var id:UUID = UUID()
     
     init(weeklyWeather: WeeklyWeatherForecastResponse.Item) {
         self.weather = weeklyWeather

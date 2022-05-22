@@ -56,9 +56,11 @@ extension HomeWeatherViewModel{
     
     // Preparing weekly weather row view model
     func prepareWeatherRowViewModels(weeklyWeatherReponse:WeeklyWeatherForecastResponse) {
+        var rowViewModels = [WeeklyWeatherRowViewModel]()
         weeklyWeatherReponse.list.forEach{
-            self.weeklyViewModel?.append(WeeklyWeatherRowViewModel(weeklyWeather: $0))
+            rowViewModels.append(WeeklyWeatherRowViewModel(weeklyWeather: $0))
         }
+        self.weeklyRowViewModels = rowViewModels
     }
     
     // Saving weather data to database

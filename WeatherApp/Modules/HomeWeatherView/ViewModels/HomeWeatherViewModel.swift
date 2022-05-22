@@ -19,13 +19,13 @@ final class HomeWeatherViewModel : ObservableObject{
     internal let weatherApiService: WeatherApiServiceProtocol
     internal var bindings = Set<AnyCancellable>()
     @Published var state:HomeWeatherViewModelState = .finishLoading
-    @Published var todayViewModel:TodaysWeatherViewModel?
-    @Published var weeklyViewModel:[WeeklyWeatherRowViewModel]?
+    var todayViewModel:TodaysWeatherViewModel = TodaysWeatherViewModel()
+    @Published var weeklyRowViewModels:[WeeklyWeatherRowViewModel]?
     
     var todayWeatherModel:TodaysWeatherForecastResponse? = nil{
         didSet{
             if let todayModel = todayWeatherModel{
-                self.todayViewModel = TodaysWeatherViewModel(todayWeather: todayModel)
+                self.todayViewModel.setWeatherData(todayWeather: todayModel)
                 fetchWeekWeatherDetails()
             }
         }

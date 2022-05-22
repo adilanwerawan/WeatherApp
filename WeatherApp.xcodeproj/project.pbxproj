@@ -29,6 +29,7 @@
 		FAAEAAFD2839652300AC0455 /* WeeklyWeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAEAAFC2839652300AC0455 /* WeeklyWeatherView.swift */; };
 		FAAEAB002839670600AC0455 /* WeeklyWeatherRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAEAAFF2839670600AC0455 /* WeeklyWeatherRowViewModel.swift */; };
 		FAAEAB0328396A4400AC0455 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAEAB0228396A4400AC0455 /* Date+Extension.swift */; };
+		FAF98CF7283A06B00023322E /* DailyWeatherRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF98CF6283A06B00023322E /* DailyWeatherRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 		FAAEAAFC2839652300AC0455 /* WeeklyWeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyWeatherView.swift; sourceTree = "<group>"; };
 		FAAEAAFF2839670600AC0455 /* WeeklyWeatherRowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyWeatherRowViewModel.swift; sourceTree = "<group>"; };
 		FAAEAB0228396A4400AC0455 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		FAF98CF6283A06B00023322E /* DailyWeatherRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyWeatherRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -241,9 +243,8 @@
 		FAAEAAE32839036A00AC0455 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				FAAEAB042839812000AC0455 /* Components */,
 				FA5D299A2838B08600EA4CC4 /* HomeWeatherView.swift */,
-				FAAEAAF92839651000AC0455 /* TodayWeatherView.swift */,
-				FAAEAAFC2839652300AC0455 /* WeeklyWeatherView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -298,6 +299,16 @@
 				FAAEAB0228396A4400AC0455 /* Date+Extension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		FAAEAB042839812000AC0455 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				FAAEAAF92839651000AC0455 /* TodayWeatherView.swift */,
+				FAAEAAFC2839652300AC0455 /* WeeklyWeatherView.swift */,
+				FAF98CF6283A06B00023322E /* DailyWeatherRow.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -450,6 +461,7 @@
 				FA5D29992838B08600EA4CC4 /* WeatherAppApp.swift in Sources */,
 				FA5D29DB2838D84B00EA4CC4 /* WeatherAPiService+Extension.swift in Sources */,
 				FAAEAAFA2839651000AC0455 /* TodayWeatherView.swift in Sources */,
+				FAF98CF7283A06B00023322E /* DailyWeatherRow.swift in Sources */,
 				FA5D29D02838BD3200EA4CC4 /* TodaysWeatherForecastResponse.swift in Sources */,
 				FA5D29CE2838B8AB00EA4CC4 /* ApiConfig.swift in Sources */,
 				FAAEAAFD2839652300AC0455 /* WeeklyWeatherView.swift in Sources */,
@@ -617,10 +629,11 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = weatherapp/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "${APP_DISPLAY_NAME}";
+				INFOPLIST_KEY_CFBundleDisplayName = "WeatherApp Dev";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -649,10 +662,11 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = weatherapp/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "${APP_DISPLAY_NAME}";
+				INFOPLIST_KEY_CFBundleDisplayName = "WeatherApp Dev";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -834,10 +848,11 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = weatherapp/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "${APP_DISPLAY_NAME}";
+				INFOPLIST_KEY_CFBundleDisplayName = "WeatherApp Dev";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
