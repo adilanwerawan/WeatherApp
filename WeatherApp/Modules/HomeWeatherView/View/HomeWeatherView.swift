@@ -32,7 +32,7 @@ struct HomeWeatherView: View {
                     if isWeeklyWeatherRecieved{
                         if let viewModels = viewModel.weeklyRowViewModels{
                             WeeklyWeatherView(rowViewModels: viewModels)
-                                .opacity(0)
+                                .padding()
                         }
                     }
                     Spacer()

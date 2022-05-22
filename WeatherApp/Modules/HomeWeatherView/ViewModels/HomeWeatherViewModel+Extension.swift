@@ -60,7 +60,7 @@ extension HomeWeatherViewModel{
         weeklyWeatherReponse.list.forEach{
             rowViewModels.append(WeeklyWeatherRowViewModel(weeklyWeather: $0))
         }
-        self.weeklyRowViewModels = rowViewModels
+        self.weeklyRowViewModels = rowViewModels.removingDuplicates()
     }
     
     // Saving weather data to database

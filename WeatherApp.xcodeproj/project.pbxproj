@@ -30,6 +30,7 @@
 		FAAEAB002839670600AC0455 /* WeeklyWeatherRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAEAAFF2839670600AC0455 /* WeeklyWeatherRowViewModel.swift */; };
 		FAAEAB0328396A4400AC0455 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAEAB0228396A4400AC0455 /* Date+Extension.swift */; };
 		FAF98CF7283A06B00023322E /* DailyWeatherRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF98CF6283A06B00023322E /* DailyWeatherRow.swift */; };
+		FAF98CF9283A2B540023322E /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF98CF8283A2B540023322E /* Array+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		FAAEAAFF2839670600AC0455 /* WeeklyWeatherRowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyWeatherRowViewModel.swift; sourceTree = "<group>"; };
 		FAAEAB0228396A4400AC0455 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		FAF98CF6283A06B00023322E /* DailyWeatherRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyWeatherRow.swift; sourceTree = "<group>"; };
+		FAF98CF8283A2B540023322E /* Array+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -297,6 +299,7 @@
 			isa = PBXGroup;
 			children = (
 				FAAEAB0228396A4400AC0455 /* Date+Extension.swift */,
+				FAF98CF8283A2B540023322E /* Array+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -459,6 +462,7 @@
 				FA5D29D22838C80000EA4CC4 /* WeaklyWeatherForecastResponce.swift in Sources */,
 				FAAEAAEE283919F300AC0455 /* Settings.swift in Sources */,
 				FA5D29992838B08600EA4CC4 /* WeatherAppApp.swift in Sources */,
+				FAF98CF9283A2B540023322E /* Array+Extension.swift in Sources */,
 				FA5D29DB2838D84B00EA4CC4 /* WeatherAPiService+Extension.swift in Sources */,
 				FAAEAAFA2839651000AC0455 /* TodayWeatherView.swift in Sources */,
 				FAF98CF7283A06B00023322E /* DailyWeatherRow.swift in Sources */,

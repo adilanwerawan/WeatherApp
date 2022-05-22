@@ -10,7 +10,9 @@ import Foundation
 struct WeeklyWeatherRowViewModel:Identifiable {
     private let weather: WeeklyWeatherForecastResponse.Item
     
-    internal var id:UUID = UUID()
+    var id: String {
+      return onlyDate + temperature + shortWeatherName
+    }
     
     init(weeklyWeather: WeeklyWeatherForecastResponse.Item) {
         self.weather = weeklyWeather
@@ -35,5 +37,15 @@ struct WeeklyWeatherRowViewModel:Identifiable {
     var weatherDescription:String{
         return weather.weather[0].weatherDescription
     }
+}
+
+extension WeeklyWeatherRowViewModel: Hashable {
+  static func == (lhs: WeeklyWeatherRowViewModel, rhs: WeeklyWeatherRowViewModel) -> Bool {
+    return lhs.onlyDate == rhs.onlyDate
+  }
+
+  func hash(into hasher: inout Hasher) {
+    hasher.combine(self.onlyDate)
+  }
 }
 

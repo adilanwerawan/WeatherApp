@@ -11,15 +11,24 @@ struct WeeklyWeatherView: View {
     @State var rowViewModels:[WeeklyWeatherRowViewModel]
     
     var body: some View {
-        List{
-            ForEach(rowViewModels) { model in
-                HStack{
-                    Text("Row 1")
+        VStack{
+            Spacer()
+            List{
+                ForEach(rowViewModels) { model in
+                    HStack{
+                        DailyWeatherRow(viewModel: model)
+                            .padding()
+                    }
+                    .background(Color.white)
+                    .clipShape(RoundedRectangle(cornerRadius: 10))
+                    .onAppear(){
+                        print("weather : \(model.shortWeatherName)")
+                    }
                 }
-                .onAppear(){
-                    print("weather : \(model.shortWeatherName)")
-                }
+                .listRowBackground(Color.clear)
             }
+            .listStyle(.plain)
+            Spacer()
         }
     }
 }

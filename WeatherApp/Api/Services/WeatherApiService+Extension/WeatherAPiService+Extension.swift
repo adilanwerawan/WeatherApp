@@ -19,7 +19,6 @@ extension WeatherApiService{
             urlComponents.queryItems = [
                 URLQueryItem(name: "lat", value: String(self.providedLat)),
                 URLQueryItem(name: "lon", value: String(self.providedLong)),
-                URLQueryItem(name: "cnt", value: String(7)),
                 URLQueryItem(name: "mode", value: "json"),
                 URLQueryItem(name: "units", value: String(Settings.unit.rawValue)),
                 URLQueryItem(name: "appid", value: ApiConfig.apiKey)
