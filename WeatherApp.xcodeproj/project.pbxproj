@@ -33,7 +33,7 @@
 		FAF98CF9283A2B540023322E /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF98CF8283A2B540023322E /* Array+Extension.swift */; };
 		FAF98CFB283A2E510023322E /* MainContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF98CFA283A2E510023322E /* MainContentView.swift */; };
 		FAF98CFD283A2E920023322E /* LocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF98CFC283A2E920023322E /* LocationViewModel.swift */; };
-		FAF98D00283A31E90023322E /* LocationWorkViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF98CFF283A31E90023322E /* LocationWorkViews.swift */; };
+		FAF98D00283A31E90023322E /* LocationWorkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF98CFF283A31E90023322E /* LocationWorkView.swift */; };
 		FAF98D02283A33270023322E /* General.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF98D01283A33270023322E /* General.swift */; };
 		FAF98D04283A68DF0023322E /* LoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF98D03283A68DF0023322E /* LoaderView.swift */; };
 		FAF98D08283A6B560023322E /* MockWeatherApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF98D07283A6B560023322E /* MockWeatherApiService.swift */; };
@@ -80,7 +80,7 @@
 		FAF98CF8283A2B540023322E /* Array+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
 		FAF98CFA283A2E510023322E /* MainContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainContentView.swift; sourceTree = "<group>"; };
 		FAF98CFC283A2E920023322E /* LocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewModel.swift; sourceTree = "<group>"; };
-		FAF98CFF283A31E90023322E /* LocationWorkViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LocationWorkViews.swift; path = ../../../../../../../Documents/LocationWorkViews.swift; sourceTree = "<group>"; };
+		FAF98CFF283A31E90023322E /* LocationWorkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LocationWorkView.swift; path = ../../../../../../../Documents/LocationWorkView.swift; sourceTree = "<group>"; };
 		FAF98D01283A33270023322E /* General.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = General.swift; sourceTree = "<group>"; };
 		FAF98D03283A68DF0023322E /* LoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderView.swift; sourceTree = "<group>"; };
 		FAF98D07283A6B560023322E /* MockWeatherApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockWeatherApiService.swift; sourceTree = "<group>"; };
@@ -328,7 +328,7 @@
 		FAF98CFE283A31D80023322E /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				FAF98CFF283A31E90023322E /* LocationWorkViews.swift */,
+				FAF98CFF283A31E90023322E /* LocationWorkView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -463,7 +463,7 @@
 				FA5D299B2838B08600EA4CC4 /* HomeWeatherView.swift in Sources */,
 				FAAEAB002839670600AC0455 /* WeeklyWeatherRowViewModel.swift in Sources */,
 				FAAEAAF528395ED600AC0455 /* HomeWeatherViewModel+Extension.swift in Sources */,
-				FAF98D00283A31E90023322E /* LocationWorkViews.swift in Sources */,
+				FAF98D00283A31E90023322E /* LocationWorkView.swift in Sources */,
 				FAAEAAE92839040800AC0455 /* TodaysWeatherDBModel.swift in Sources */,
 				FAF98D02283A33270023322E /* General.swift in Sources */,
 				FAF98CFD283A2E920023322E /* LocationViewModel.swift in Sources */,
